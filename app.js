@@ -1,7 +1,7 @@
-import program from './utils/commander'
-import sort from './module/sorting'
-import createFolderIsNotExist from './utils/createFolder'
-import {handleError} from './utils/handleError'
+import program from './utils/commander.js'
+import sort from './module/sorting.js'
+import createFolderIsNotExist from './utils/createFolder.js'
+import {handleError} from './utils/handleError.js'
 // __dirname __filename
 import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'

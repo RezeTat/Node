@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises'
 import * as path from 'path'
-import { handleError } from '../utils/handleError'
-import createFolderIsNotExist from '../utils/createFolder'
+import { handleError } from '../utils/handleError.js'
+import createFolderIsNotExist from '../utils/createFolder.js'
 
 const criteriaExtFile = (file) => {
   const folder = path.extname(file.path)
@@ -28,7 +28,7 @@ const copyFile = async (file) => {
   const dir = criteriaForDir(file)
   try {
     await createFolderIsNotExist(dir)
-    await fs.copyFile(file.path, path.join(dir, file.name), (err))
+    await fs.copyFile(file.path, path.join(dir, file.name))
   } catch (e) {
     handleError(e)
   }
